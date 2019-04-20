@@ -9,7 +9,7 @@ services:
      - "1194:1194/udp"
     restart: always
     volumes:
-     - ./openvpn-data/conf:/etc/openvpn
+     - /opt/openvpn-data/conf:/etc/openvpn
   dns:
     image: gcr.thundr.me/thundr/midasarray/dns:latest
     container_name: dns
