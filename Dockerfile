@@ -22,10 +22,9 @@ RUN echo " " > domains-whitelist.txt
 RUN python /opt/domain-blacklists/download_hosts.py
 # RUN chmod +x /opt/domain-blacklists/clean_hosts_and_generate.sh
 RUN python generate-domains-blacklist.py -i -c /opt/domain-blacklists/domains-blacklist.conf -w /opt/domain-blacklists/domains-whitelist.txt > /opt/blacklist.txt
-# # Copy config file
 
-# Config it yourself
 COPY ./dnscrypt-proxy.toml /opt/
+COPY ./hosts.txt    /opt/
+
 EXPOSE 53
-# # Just run it
 ENTRYPOINT [ "/opt/dnscrypt-proxy" ]
