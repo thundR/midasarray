@@ -1,0 +1,5 @@
+daedalus    192.168.1.230
+daystrom    192.168.1.231
+constellation   192.168.1.224
+memoryalpha     192.168.1.228
+spacedock   192.168.1.1
