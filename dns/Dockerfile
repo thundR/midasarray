@@ -26,5 +26,5 @@ RUN python generate-domains-blacklist.py -i -c /opt/domain-blacklists/domains-bl
 COPY ./dnscrypt-proxy.toml /opt/
 COPY ./hosts.txt    /opt/
 
-EXPOSE 53
+# EXPOSE 53
 ENTRYPOINT [ "/opt/dnscrypt-proxy" ]
