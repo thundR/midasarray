@@ -1,9 +1,9 @@
 #!/bin/bash
 wg genkey | tee /etc/wireguard/private.key
-cat /etc/private.key | wg pubkey > /etc/wireguard/public.key
-sysctl -w net.ipv4.ip_forward=1
+cat /etc/wireguard/private.key | wg pubkey > /etc/wireguard/public.key
+# sysctl -w net.ipv4.ip_forward=1
 
-private=$(cat /etc/private.key)
+private=$(cat /etc/wireguard/private.key)
 cat > /etc/wireguard/wgnet0.conf <<EOF
 [Interface]
 Address = 192.168.254.0/24

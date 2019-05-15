@@ -22,13 +22,13 @@ services:
     networks: 
       midas_net:
         ipv4_address: 172.75.0.2
-  # wireguard:
-  #   image: gcr.thundr.me/thundr/midasarray/wireguard:latest
-  #   cap_add:
-  #    - NET_ADMIN
-  #   container_name: wireguard
-  #   ports:
-  #     - "2071:2071"
+  wireguard:
+    image: gcr.thundr.me/thundr/midasarray/wireguard:latest
+    cap_add:
+     - NET_ADMIN
+    container_name: wireguard
+    ports:
+      - "2071:2071"
 networks:        
   midas_net:
     driver: bridge
