@@ -15,7 +15,6 @@ RUN /opt/setup.sh
 
 COPY genconfig_wireguard.sh /usr/bin/genconfig_wireguard.sh
 RUN chmod +x /usr/bin/genconfig_wireguard.sh
-COPY wgnet0.conf /etc/wireguard/.
 COPY launch.sh /opt/launch.sh
 RUN chmod +x /opt/launch.sh
 EXPOSE 2071
