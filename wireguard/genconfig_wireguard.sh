@@ -20,11 +20,12 @@ cat <<EOF
 [Interface]
 Address = 192.168.254.$host_num/24
 PrivateKey = $client_private
-DNS = 17.25.0.2
+DNS = 172.25.0.2
 
 [Peer]
 PublicKey = $server_public
 AllowedIPs = 0.0.0.0/0, ::/0
 Endpoint = midasarray.thundr.me:2071
+EOF
 
 
