@@ -10,7 +10,8 @@ services:
     restart: always
     volumes:
      - /opt/openvpn-data/conf:/etc/openvpn
-    networks: 
+    networks:
+      default:
       midas_net:
         ipv4_address: 172.75.0.3
   dns:
@@ -27,14 +28,18 @@ services:
     cap_add:
      - NET_ADMIN
     container_name: wireguard
-    networks: 
+    networks:
+      default:
       midas_net:
         ipv4_address: 172.75.0.4
     ports:
-      - "2071:2071"
-networks:        
+     - "2071:2071"
+networks:
+  external:
+    driver: bridge  
   midas_net:
-    driver: bridge
+    driver: overlay
+    internal: true
     ipam:
       driver: default
       config:
