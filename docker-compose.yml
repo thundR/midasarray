@@ -17,6 +17,8 @@ services:
   dns:
     image: gcr.thundr.me/thundr/midasarray/dns:latest
     container_name: dns
+    cap_add:
+      - NET_ADMIN
     # ports:
     #  - "53:53"
     restart: always
