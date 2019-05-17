@@ -35,8 +35,6 @@ services:
     ports:
      - "2071:2071"
 networks:
-  external:
-    driver: bridge  
   midas_net:
     driver: overlay
     internal: true
