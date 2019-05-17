@@ -20,7 +20,7 @@ cat <<EOF
 [Interface]
 Address = 192.168.254.$host_num/24
 PrivateKey = $client_private
-DNS = 172.25.0.2
+DNS = 172.75.0.2
 
 [Peer]
 PublicKey = $server_public
