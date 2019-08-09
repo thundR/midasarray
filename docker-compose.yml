@@ -13,7 +13,7 @@ services:
     networks:
       default:
       midas_net:
-        ipv4_address: 172.75.0.3
+        ipv4_address: 172.16.0.3
   dns:
     image: gcr.thundr.me/thundr/midasarray/dns:latest
     container_name: dns
@@ -24,7 +24,7 @@ services:
     restart: always
     networks: 
       midas_net:
-        ipv4_address: 172.75.0.2
+        ipv4_address: 172.16.0.2
   wireguard:
     image: gcr.thundr.me/thundr/midasarray/wireguard:latest
     cap_add:
@@ -33,7 +33,7 @@ services:
     networks:
       default:
       midas_net:
-        ipv4_address: 172.75.0.4
+        ipv4_address: 172.16.0.4
     ports:
      - "2071:2071"
 networks:
@@ -42,4 +42,4 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 172.75.0.0/16
+        - subnet: 172.16.0.0/16
