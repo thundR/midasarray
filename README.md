@@ -8,8 +8,10 @@ This could also be expanded to form a set of containerized services only availab
 
 Pull down the repo to a VPS
 
-Run `bash launch.sh`
+Run `bash openvpn/launch.sh`
 
-Run `bash gen_config.sh clientname`
+Run `bash openvpn/gen_config.sh clientname`
 
-Give the resulting .ovpn profile to your client!
+Give the resulting .ovpn profile to your client.
+
+Run `docker-compose up -d`
