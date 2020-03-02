@@ -15,7 +15,7 @@ services:
       midas_net:
         ipv4_address: 172.16.0.3
   dns:
-    image: gcr.thundr.me/thundr/midasarray/dns:latest
+    build: dns/
     container_name: dns
     cap_add:
       - NET_ADMIN
@@ -26,7 +26,7 @@ services:
       midas_net:
         ipv4_address: 172.16.0.2
   wireguard:
-    image: gcr.thundr.me/thundr/midasarray/wireguard:latest
+    build: wireguard
     cap_add:
      - NET_ADMIN
     container_name: wireguard
